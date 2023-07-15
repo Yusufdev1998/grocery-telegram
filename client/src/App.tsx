@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import GroceryItem from "./component/GroceryItem";
 import useGrocery from "./hooks/useGrocery";
 
@@ -5,9 +6,11 @@ function App() {
   const { items } = useGrocery();
   return (
     <section className="section-center">
+      <Link to={"/login"}>Login</Link>
       <form className="grocery-form">
         <p className="alert"></p>
         <h3>grocery bud</h3>
+
         <div className="form-control">
           <input type="text" id="grocery" placeholder="e.g. eggs" />
           <button type="submit" className="submit-btn">
