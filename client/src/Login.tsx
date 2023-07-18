@@ -13,7 +13,7 @@ const Login = () => {
     console.log(res);
   };
   return (
-    <div>
+    <div style={{ display: "grid", placeItems: "center", height: "100vh" }}>
       <TLoginBtn dataOnauth={authCB} botName="groceryfn4bot"></TLoginBtn>
     </div>
   );
