@@ -1,23 +1,21 @@
-import TelegramLoginButton from "react-telegram-login";
+import TLoginBtn from "react-telegram-login";
 
-interface User {
+interface Ires {
   id: number;
   first_name: string;
-  last_name?: string;
-  username?: string;
-  photo_url?: string;
+  photo_url: string;
   auth_date: string;
   hash: string;
 }
+
 const Login = () => {
-  const handleTelegramResponse = (res: User) => {
+  const authCB = (res: Ires) => {
     console.log(res);
   };
   return (
-    <TelegramLoginButton
-      dataOnauth={handleTelegramResponse}
-      botName="groceryfn4bot"
-    />
+    <div>
+      <TLoginBtn dataOnauth={authCB} botName="groceryfn4bot"></TLoginBtn>
+    </div>
   );
 };
 
